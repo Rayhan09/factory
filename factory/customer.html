@@ -3,45 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <title>customer</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 </head>
 <body>
     <h3 align="center" >Customer Information......</h3><hr/>
-    <form method="#" action="#">
-        <table align="center" width="80%" border="1">
-            <tr>
-                <td>Customer Name: </td>
-                <td> <input type="text" maxlength="40" size="100" name="customer_name" placeholder="customer_name" value=""> </td>
-            </tr>
-            <tr>
-                <td>E-mail: </td>
-                <td> <input type="text" maxlength="40" size="100" name="email" placeholder="jhone@mail.com" value=""> </td>
-            </tr>
-            <tr>
-                <td>Home Address: </td>
-                <td> <input type="text" maxlength="100" size="100" name="home_address" placeholder="home_address" value=""> </td>
-            </tr>
-            <tr>
-                <td>Business Address: </td>
-                <td> <input type="text" maxlength="100" size="100" name="business_address" placeholder="business_address" value=""></td>
-            </tr>
-            <tr>
-                <td>Phone Number: </td>
-                <td> <input type="text" maxlength="20" size="100" name="phone_no" placeholder="phone_no" value=""> </td>
-            </tr>
-            <tr>
-                <td>Insertion Time</td>
-                <td> <input type="datetime-local" name="insertion_time" value=""></td> <br/>
 
-            </tr>
-            <tr align="center">
-                <td></td>
-                <td>
-                    <input type="submit" name="btn" value="submit">
-                    <input type="reset" name="btn" value="Reset">
+    <form class="w3-container">
+        <!-- Modal Start Here -->
+        <div id="create" class="w3-modal" style="z-index:4">
+            <div class="w3-modal-content w3-animate-zoom">
 
-                </td>
-            </tr>
-        </table>
+                <div class="w3-container w3-teal">
+                    <span onclick="document.getElementById('create').style.display='none'" class="w3-button w3-right w3-medium w3-margin-top"><i class="fa fa-remove"></i></span>
+                </div>
+
+                <div class="w3-panel">
+                    <div class="w3-row-padding">
+                        <div class="w3-half">
+                            <label>Customer Name</label>
+                            <input class="w3-input w3-border w3-margin-bottom" type="text" ng-model="$ctrl.customer.customer_name" placeholder="Customer Name">
+                        </div>
+                    </div>
+                    <div class="w3-row-padding">
+                        <div class="w3-half">
+                            <label>Email</label>
+                            <input class="w3-input w3-border w3-margin-bottom" type="email" ng-model="$ctrl.user.email" placeholder="Email">
+                        </div>
+                        <div class="w3-half">
+                            <label>Username</label>
+                            <input class="w3-input w3-border w3-margin-bottom" type="text" ng-model="$ctrl.user.username" placeholder="Username">
+                        </div>
+                    </div>
+                    <div class="w3-row-padding">
+                        <div class="w3-half">
+                            <label>Mobile No</label>
+                            <input class="w3-input w3-border w3-margin-bottom" type="text" ng-model="$ctrl.user.mobile_no" placeholder="Mobile No">
+                        </div>
+                        <div class="w3-half">
+                            <label>User Type</label>
+                            <select class="w3-select w3-border w3-margin-bottom" name="type_id" ng-model="$ctrl.user.type_id">
+                                <option value="" disabled selected>Choose a option</option>
+                                <option ng-repeat="u in $ctrl.userType" value="{{u['type_id']}}">{{u['user_type']}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="w3-row-padding">
+                        <div class="w3-half">
+                            <label>Password</label>
+                            <input class="w3-input w3-border w3-margin-bottom" type="password" ng-model="$ctrl.user.password" placeholder="Password">
+                        </div>
+                        <div class="w3-half">
+                            <label>Confirm Password</label>
+                            <input class="w3-input w3-border w3-margin-bottom" type="password" ng-model="$ctrl.confirm_password" placeholder="Confirm Password">
+                        </div>
+                    </div>
+                    <div class="w3-row-padding">
+                        <div class="w3-half">
+                            <label>Status</label>
+                            <p>
+                                <input class="w3-radio w3-margin-bottom" type="radio" name="status" ng-model="$ctrl.user.active_status" value="1" ng-checked>
+                                <label>Active</label>
+                                <input class="w3-radio w3-margin-bottom" type="radio" name="status" ng-model="$ctrl.user.active_status" value="0">
+                                <label>Inactive</label>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w3-section">
+                        <a class="w3-button w3-red" onclick="document.getElementById('create').style.display='none'">
+                            Cancel  <i class="fa fa-remove"></i>
+                        </a>
+                        <a ng-hide="$ctrl.isEdit" class="w3-button w3-green w3-right" ng-click="$ctrl.createUser($ctrl.user)">
+                            Create <i class="fa fa-"></i>
+                        </a>
+                        <a ng-show="$ctrl.isEdit" class="w3-button w3-green w3-right" ng-click="$ctrl.editUser($ctrl.user)">
+                            Edit User <i class="fa fa-edit"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w3-container w3-padding massage-area" id="returnMassageArea">
+            <div class="w3-blue massage" id="returnMassage">
+                <h4 class="w3-padding">{{$ctrl.returnMsg}}</h4>
+            </div>
+        </div>
+        <!--Modal End Here-->
     </form>
+
+    <div class="w3-container">
+        <button ng-click="$ctrl.createMode()" class="w3-button w3-teal w3-right">Create New User</button>
+        <h2>Users List</h2>
+        <div class="w3-responsive w3-card-4">
+            <table class="w3-table-all w3-hoverable w3-small w3-center">
+                <thead>
+                <tr class="w3-teal">
+                    <th>Type</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="u in $ctrl.users">
+                    <td>{{u['user_type']}}</td>
+                    <td>{{u['first_name']}}</td>
+                    <td>{{u['last_name']}}</td>
+                    <td>{{u['email']}}</td>
+                    <td>{{u['mobile_no']}}</td>
+                    <td>{{u['active_status'] === '1' ? "active":"Inactive"}}</td>
+                    <td><i class="w3-button fa fa-edit" ng-click="$ctrl.editMood(u)"></i></td>
+                </tr>
+                <tr>
+                    <td class="w3-center" colspan="7" ng-show="$ctrl.isEmpty">No result found!</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
