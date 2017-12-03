@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3bae0bf-1b0a-4856-b93c-cf748831d075" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/factory/try.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/factory/new.html" afterPath="$PROJECT_DIR$/factory/new.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/factory/try.html" afterPath="$PROJECT_DIR$/factory/try.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="try.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="try.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/factory/try.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+            <state relative-caret-position="357">
+              <caret line="21" column="115" lean-forward="false" selection-start-line="21" selection-start-column="115" selection-end-line="21" selection-end-column="115" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -28,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="new.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/factory/new.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="166" column="32" lean-forward="false" selection-start-line="166" selection-start-column="32" selection-end-line="166" selection-end-column="32" />
+            <state relative-caret-position="340">
+              <caret line="272" column="0" lean-forward="true" selection-start-line="272" selection-start-column="0" selection-end-line="272" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -57,9 +56,9 @@
       <list>
         <option value="$PROJECT_DIR$/factory/action.html" />
         <option value="$PROJECT_DIR$/factory/index.html" />
-        <option value="$PROJECT_DIR$/factory/new.html" />
         <option value="$PROJECT_DIR$/factory/customer.html" />
         <option value="$PROJECT_DIR$/factory/try.html" />
+        <option value="$PROJECT_DIR$/factory/new.html" />
       </list>
     </option>
   </component>
@@ -155,16 +154,15 @@
       <workItem from="1512130355173" duration="3757000" />
       <workItem from="1512137107427" duration="586000" />
       <workItem from="1512232972952" duration="1450000" />
-      <workItem from="1512317712686" duration="5345000" />
+      <workItem from="1512317712686" duration="7543000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23712000" />
+    <option name="totallyTimeSpent" value="25910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09297218" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -352,20 +350,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/factory/new.html">
+    <entry file="file://$PROJECT_DIR$/factory/try.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="166" column="32" lean-forward="false" selection-start-line="166" selection-start-column="32" selection-end-line="166" selection-end-column="32" />
+        <state relative-caret-position="357">
+          <caret line="21" column="115" lean-forward="false" selection-start-line="21" selection-start-column="115" selection-end-line="21" selection-end-column="115" />
           <folding>
             <element signature="n#style#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/factory/try.html">
+    <entry file="file://$PROJECT_DIR$/factory/new.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        <state relative-caret-position="340">
+          <caret line="272" column="0" lean-forward="true" selection-start-line="272" selection-start-column="0" selection-end-line="272" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>

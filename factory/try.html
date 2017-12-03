@@ -8,13 +8,20 @@
 
 </head>
 <body>
-<h2> Customer Information</h2>
-
     <form class="w3-container">
         <div class="w3-modal" style="z-index:4">
             <div class="w3-modal-content w3-animate-zoom">
                 <div class="w3-container w3-teal">
+                    <span onclick="document.getElementById('create').style.display='none'" class="w3-button w3-right w3-medium w3-margin-top"><i class="fa fa-remove"></i></span>
                     <h2>Customer Information</h2>
+                </div>
+                <div class="w3-panel">
+                    <div class="w3-row-padding">
+                        <div class="w3-half">
+                            <label>Customer Name</label>
+                            <input class="w3-input w3-border w3-margin-bottom" type="text" ng-model="$ctrl.customer.customer_name" placeholder="Customer Name">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

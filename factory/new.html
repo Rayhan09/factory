@@ -246,38 +246,68 @@
     <!--Modal End Here-->
 </form>
 
-<div class="w3-container">
+<div class="w3-panel">
+
+<div class="w3-container ">
     <button ng-click="$ctrl.createMode()" class="w3-button w3-teal w3-right">Create New User</button>
     <h2>Users List</h2>
-    <div class="w3-responsive w3-card-4">
-        <table class="w3-table-all w3-hoverable w3-small w3-center">
-            <thead>
-            <tr class="w3-teal">
-                <th>Type</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-                <th>Mobile</th>
-                <th>Status</th>
-                <th>Action</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr ng-repeat="u in $ctrl.users">
-                <td>{{u['user_type']}}</td>
-                <td>{{u['first_name']}}</td>
-                <td>{{u['last_name']}}</td>
-                <td>{{u['email']}}</td>
-                <td>{{u['mobile_no']}}</td>
-                <td>{{u['active_status'] === '1' ? "active":"Inactive"}}</td>
-                <td><i class="w3-button fa fa-edit" ng-click="$ctrl.editMood(u)"></i></td>
-            </tr>
-            <tr>
-                <td class="w3-center" colspan="7" ng-show="$ctrl.isEmpty">No result found!</td>
-            </tr>
-            </tbody>
-        </table>
+    <div class="w3-row-padding">
+        <div class="w3-half">
+            <label> Customer</label>
+            <input class="w3-input w3-border w3-margin-bottom" type="password" ng-model="$ctrl.confirm_password" placeholder="Confirm Password">
+        </div>
     </div>
+
+    <div class="w3-row-padding">
+    <div class="w3-half">
+        <label> Customer Number </label>
+        <input class="w3-input w3-border w3-margin-bottom" type="password" ng-model="$ctrl.confirm_password" placeholder="Confirm Number">
+    </div>
+    </div>
+
+    <div class="w3-row-padding">
+        <div class="w3-half">
+            <label> Customer Number </label>
+            <input class="w3-input w3-border w3-margin-bottom" type="password" ng-model="$ctrl.confirm_password" placeholder="Confirm Number">
+        </div>
+
+
+        <div class="w3-half">
+            <label> Customer Number </label>
+            <input class="w3-input w3-border w3-margin-bottom" type="password" ng-model="$ctrl.confirm_password" placeholder="Confirm Number">
+        </div>
+    </div>
+</div>
+    <!--<div class="w3-responsive w3-card-4">-->
+        <!--<table class="w3-table-all w3-hoverable w3-small w3-center">-->
+
+            <!--<thead>-->
+            <!--<tr class="w3-teal">-->
+                <!--<th>Type</th>-->
+                <!--<th>First Name</th>-->
+                <!--<th>Last Name</th>-->
+                <!--<th>Email</th>-->
+                <!--<th>Mobile</th>-->
+                <!--<th>Status</th>-->
+                <!--<th>Action</th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody>-->
+            <!--<tr ng-repeat="u in $ctrl.users">-->
+                <!--<td>{{u['user_type']}}</td>-->
+                <!--<td>{{u['first_name']}}</td>-->
+                <!--<td>{{u['last_name']}}</td>-->
+                <!--<td>{{u['email']}}</td>-->
+                <!--<td>{{u['mobile_no']}}</td>-->
+                <!--<td>{{u['active_status'] === '1' ? "active":"Inactive"}}</td>-->
+                <!--<td><i class="w3-button fa fa-edit" ng-click="$ctrl.editMood(u)"></i></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td class="w3-center" colspan="7" ng-show="$ctrl.isEmpty">No result found!</td>-->
+            <!--</tr>-->
+            <!--</tbody>-->
+        <!--</table>-->
+    <!--</div>-->
 </div>
 </body>
 </html>
