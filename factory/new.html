@@ -167,80 +167,47 @@
         <div class="w3-modal-content w3-animate-zoom">
             <div class="w3-container w3-teal">
                 <span onclick="document.getElementById('create').style.display='none'" class="w3-button w3-right w3-medium w3-margin-top"><i class="fa fa-remove"></i></span>
-                <h2>User Information</h2>
+                <h2>Customer Information</h2>
             </div>
             <div class="w3-panel">
                 <div class="w3-row-padding">
                     <div class="w3-half">
-                        <label>First Name</label>
-                        <input class="w3-input w3-border w3-margin-bottom" type="text" ng-model="$ctrl.user.first_name" placeholder="First Name">
+                        <label>Customer Name</label>
+                        <input class="w3-input w3-border w3-margin-bottom" type="text" ng-model="$ctrl.customer.customer_name" placeholder="Customer Name">
                     </div>
                     <div class="w3-half">
-                        <label>Last Name</label>
-                        <input class="w3-input w3-border w3-margin-bottom" type="text" ng-model="$ctrl.user.last_name" placeholder="Last Name">
+                        <label>E-mail</label>
+                        <input class="w3-input w3-border w3-margin-bottom" type="text" ng-model="$ctrl.customer.email" placeholder="Email">
                     </div>
                 </div>
                 <div class="w3-row-padding">
                     <div class="w3-half">
-                        <label>Email</label>
-                        <input class="w3-input w3-border w3-margin-bottom" type="email" ng-model="$ctrl.user.email" placeholder="Email">
+                        <label>Home Address</label>
+                        <input class="w3-input w3-border w3-margin-bottom" type="email" ng-model="$ctrl.customer.home_address" placeholder="Home Address">
                     </div>
                     <div class="w3-half">
-                        <label>Username</label>
-                        <input class="w3-input w3-border w3-margin-bottom" type="text" ng-model="$ctrl.user.username" placeholder="Username">
+                        <label>Business Address</label>
+                        <input class="w3-input w3-border w3-margin-bottom" type="text" ng-model="$ctrl.customer.business_address" placeholder="Business Address">
                     </div>
                 </div>
                 <div class="w3-row-padding">
                     <div class="w3-half">
                         <label>Mobile No</label>
-                        <input class="w3-input w3-border w3-margin-bottom" type="text" ng-model="$ctrl.user.mobile_no" placeholder="Mobile No">
-                    </div>
-                    <div class="w3-half">
-                        <label>User Type</label>
-                        <select class="w3-select w3-border w3-margin-bottom" name="type_id" ng-model="$ctrl.user.type_id">
-                            <option value="" disabled selected>Choose a option</option>
-                            <option ng-repeat="u in $ctrl.userType" value="{{u['type_id']}}">{{u['user_type']}}</option>
-                        </select>
+                        <input class="w3-input w3-border w3-margin-bottom" type="text" ng-model="$ctrl.customer.phone_no" placeholder="Phone Number">
                     </div>
                 </div>
                 <div class="w3-row-padding">
                     <div class="w3-half">
-                        <label>Password</label>
-                        <input class="w3-input w3-border w3-margin-bottom" type="password" ng-model="$ctrl.user.password" placeholder="Password">
+                        <label>Mobile No</label>
+                        <input class="w3-input w3-border w3-margin-bottom" type="datetime-local" ng-model="$ctrl.customer.insertion_time">
                     </div>
-                    <div class="w3-half">
-                        <label>Confirm Password</label>
-                        <input class="w3-input w3-border w3-margin-bottom" type="password" ng-model="$ctrl.confirm_password" placeholder="Confirm Password">
-                    </div>
-                </div>
-                <div class="w3-row-padding">
-                    <div class="w3-half">
-                        <label>Status</label>
-                        <p>
-                            <input class="w3-radio w3-margin-bottom" type="radio" name="status" ng-model="$ctrl.user.active_status" value="1" ng-checked>
-                            <label>Active</label>
-                            <input class="w3-radio w3-margin-bottom" type="radio" name="status" ng-model="$ctrl.user.active_status" value="0">
-                            <label>Inactive</label>
-                        </p>
-                    </div>
-                </div>
-                <div class="w3-section">
-                    <a class="w3-button w3-red" onclick="document.getElementById('create').style.display='none'">
-                        Cancel  <i class="fa fa-remove"></i>
-                    </a>
-                    <a ng-hide="$ctrl.isEdit" class="w3-button w3-green w3-right" ng-click="$ctrl.createUser($ctrl.user)">
-                        Create <i class="fa fa-"></i>
-                    </a>
-                    <a ng-show="$ctrl.isEdit" class="w3-button w3-green w3-right" ng-click="$ctrl.editUser($ctrl.user)">
-                        Edit User <i class="fa fa-edit"></i>
-                    </a>
                 </div>
             </div>
         </div>
     </div>
     <div class="w3-container w3-padding massage-area" id="returnMassageArea">
         <div class="w3-blue massage" id="returnMassage">
-            <h4 class="w3-padding">Customer Information</h4>
+            <h4 class="w3-padding w3-xxlarge">Customer Information</h4>
         </div>
     </div>
     <!--Modal End Here-->
@@ -250,7 +217,6 @@
 
 <div class="w3-container ">
     <button ng-click="$ctrl.createMode()" class="w3-button w3-teal w3-right">Create New User</button>
-    <h2>Customer Information</h2>
 
 </div>
     <div class="w3-responsive  w3-row-padding w3-panel">
@@ -261,22 +227,22 @@
 
         <div class="w3-half">
             <label>E-mail</label>
-            <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Customer Name">
+            <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="E-mail">
         </div>
 
         <div class="w3-half">
             <label>Home Address</label>
-            <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Customer Name">
+            <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Home Address">
         </div>
 
         <div class="w3-half">
             <label>Business Address</label>
-            <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Customer Name">
+            <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Business Address">
         </div>
 
         <div class="w3-half">
             <label>Phone number</label>
-            <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Customer Name">
+            <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Phone number">
         </div>
 
         <div class="w3-half">
