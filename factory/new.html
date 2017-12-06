@@ -240,7 +240,7 @@
     </div>
     <div class="w3-container w3-padding massage-area" id="returnMassageArea">
         <div class="w3-blue massage" id="returnMassage">
-            <h4 class="w3-padding">{{$ctrl.returnMsg}}</h4>
+            <h4 class="w3-padding">Customer Information</h4>
         </div>
     </div>
     <!--Modal End Here-->
@@ -250,64 +250,42 @@
 
 <div class="w3-container ">
     <button ng-click="$ctrl.createMode()" class="w3-button w3-teal w3-right">Create New User</button>
-    <h2>Users List</h2>
-    <div class="w3-row-padding">
-        <div class="w3-half">
-            <label> Customer</label>
-            <input class="w3-input w3-border w3-margin-bottom" type="password" ng-model="$ctrl.confirm_password" placeholder="Confirm Password">
-        </div>
-    </div>
+    <h2>Customer Information</h2>
 
-    <div class="w3-row-padding">
-    <div class="w3-half">
-        <label> Customer Number </label>
-        <input class="w3-input w3-border w3-margin-bottom" type="password" ng-model="$ctrl.confirm_password" placeholder="Confirm Number">
-    </div>
-    </div>
-
-    <div class="w3-row-padding">
-        <div class="w3-half">
-            <label> Customer Number </label>
-            <input class="w3-input w3-border w3-margin-bottom" type="password" ng-model="$ctrl.confirm_password" placeholder="Confirm Number">
-        </div>
-
-
-        <div class="w3-half">
-            <label> Customer Number </label>
-            <input class="w3-input w3-border w3-margin-bottom" type="password" ng-model="$ctrl.confirm_password" placeholder="Confirm Number">
-        </div>
-    </div>
 </div>
-    <!--<div class="w3-responsive w3-card-4">-->
-        <!--<table class="w3-table-all w3-hoverable w3-small w3-center">-->
+    <div class="w3-responsive  w3-row-padding w3-panel">
+        <div class="w3-half">
+            <label>Customer Name</label>
+            <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Customer Name">
+        </div>
 
-            <!--<thead>-->
-            <!--<tr class="w3-teal">-->
-                <!--<th>Type</th>-->
-                <!--<th>First Name</th>-->
-                <!--<th>Last Name</th>-->
-                <!--<th>Email</th>-->
-                <!--<th>Mobile</th>-->
-                <!--<th>Status</th>-->
-                <!--<th>Action</th>-->
-            <!--</tr>-->
-            <!--</thead>-->
-            <!--<tbody>-->
-            <!--<tr ng-repeat="u in $ctrl.users">-->
-                <!--<td>{{u['user_type']}}</td>-->
-                <!--<td>{{u['first_name']}}</td>-->
-                <!--<td>{{u['last_name']}}</td>-->
-                <!--<td>{{u['email']}}</td>-->
-                <!--<td>{{u['mobile_no']}}</td>-->
-                <!--<td>{{u['active_status'] === '1' ? "active":"Inactive"}}</td>-->
-                <!--<td><i class="w3-button fa fa-edit" ng-click="$ctrl.editMood(u)"></i></td>-->
-            <!--</tr>-->
-            <!--<tr>-->
-                <!--<td class="w3-center" colspan="7" ng-show="$ctrl.isEmpty">No result found!</td>-->
-            <!--</tr>-->
-            <!--</tbody>-->
-        <!--</table>-->
-    <!--</div>-->
+        <div class="w3-half">
+            <label>E-mail</label>
+            <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Customer Name">
+        </div>
+
+        <div class="w3-half">
+            <label>Home Address</label>
+            <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Customer Name">
+        </div>
+
+        <div class="w3-half">
+            <label>Business Address</label>
+            <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Customer Name">
+        </div>
+
+        <div class="w3-half">
+            <label>Phone number</label>
+            <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Customer Name">
+        </div>
+
+        <div class="w3-half">
+            <label>Insertion Time</label>
+            <input class="w3-input w3-border w3-margin-bottom" type="datetime-local">
+        </div>
+
+    </div>
 </div>
 </body>
 </html>
+
