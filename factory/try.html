@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
-    <title>Customer Information</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <title>Grade Information</title>
 
 </head>
 <body>
@@ -13,18 +14,70 @@
             <div class="w3-modal-content w3-animate-zoom">
                 <div class="w3-container w3-teal">
                     <span onclick="document.getElementById('create').style.display='none'" class="w3-button w3-right w3-medium w3-margin-top"><i class="fa fa-remove"></i></span>
-                    <h2>Customer Information</h2>
+                    <h2>Grade Information</h2>
                 </div>
                 <div class="w3-panel">
                     <div class="w3-row-padding">
                         <div class="w3-half">
-                            <label>Customer Name</label>
-                            <input class="w3-input w3-border w3-margin-bottom" type="text" ng-model="$ctrl.customer.customer_name" placeholder="Customer Name">
+                            <label>Grade Name</label>
+                            <input class="w3-input w3-radio" type="radio" ng-model="$ctrl.grade.grade_name">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="w3-container w3-padding massage-area" id="returnMassageArea">
+            <div class="w3-padding w3-teal" id="returnMassage">
+                <h1>Grade Information</h1>
+            </div>
+        </div>
     </form>
+
+    <div class="w3-responsive  w3-row-padding w3-panel">
+        <div class="w3-rest w3-panel">
+            <h3>Grade detail</h3>
+        </div>
+        <div class="w3-panel">
+            <div class="w3-padding">
+                Grade A <input class="w3-radio" type="radio" name="grade_name" value="Grade_A">
+            </div>
+
+            <div class="w3-padding">
+                Grade B <input class="w3-radio" type="radio" name="grade_name" value="Grade_B">
+            </div>
+
+            <div class="w3-padding">
+                Grade C <input class="w3-radio" type="radio" name="grade_name" value="Grade_C">
+            </div>
+        </div>
+
+        <div class="w3-model-container ">
+            <div class="w3-panel">
+                <div class="w3-row-padding">
+                    <div class="w3-half w3-quarter w3-display-middle">
+                        <div class="w3-padding w3-twothird">
+                            Grade A <input class="w3-radio" type="radio" name="grade_name" value="Grade_A">
+                        </div>
+                        <div class="w3-padding w3-twothird">
+                            Grade A <input class="w3-radio" type="radio" name="grade_name" value="Grade_A">
+                        </div>
+                        <div class="w3-padding w3-twothird">
+                            Grade A <input class="w3-radio" type="radio" name="grade_name" value="Grade_A">
+                        </div>
+                        <div class="w3-container ">
+                            <button class="w3-button w3-round w3-teal w3-right"> Submit </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="w3-container ">
+        <button class="w3-button w3-round w3-teal w3-display-middle"> Submit </button>
+    </div>
+
 </body>
 </html>
